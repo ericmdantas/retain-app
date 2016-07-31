@@ -1,4 +1,4 @@
-var path = require('path');
+const {join} = require('path');
 const webpack = require('webpack');
 
 const config = {
@@ -11,7 +11,7 @@ const config = {
   },
 
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: join(__dirname, 'dist'),
     filename: '[name].bundle.js',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js'
@@ -51,4 +51,5 @@ const config = {
     setTimeout: true
   }
 };
+
 module.exports = config;
